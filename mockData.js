@@ -7,4 +7,4 @@ const mockData = [
   { name: "Complete Todo App on Frontend", completed: false },
 ];
 
-export default mockData;
+module.exports = mockData;
