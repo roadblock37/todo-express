@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const connectDB = require("./DB/connectDB");
 const notFound = require("./Middleware/notFound");
+const todos = require("./Routes/todoRoute");
 
 require("dotenv").config();
 
@@ -9,7 +10,7 @@ require("dotenv").config();
 app.use(express.json());
 
 // routes
-// app.use('/api/v1/todo', todo)
+app.use("/api/v1/todos", todos);
 
 app.use(notFound);
 
