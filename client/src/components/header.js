@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div>
+    <div className="header">
       <h1>TODO</h1>
 
       <input type="checkbox" id="themeToggle" name="themeToggle" />
