@@ -20,7 +20,7 @@ app.get("*", (req, res) => {
 app.use(notFound);
 
 // port variable to listen on port used by host or localhost by default
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 const start = async () => {
   try {
