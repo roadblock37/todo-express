@@ -3,7 +3,7 @@ const Header = () => {
     <div className="header">
       <h1>TODO</h1>
 
-      <div className="toggleContainer">
+      <div className="toggleContainer ">
         <input type="checkbox" id="themeToggle" name="themeToggle" />
         <label for="themeToggle">
           <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
