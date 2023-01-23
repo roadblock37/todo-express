@@ -21,9 +21,7 @@ const initialState = {
   defaultState: [],
   isLoading: true,
 };
-  defaultState: [],
-  isLoading: true,
-};
+ 
 
 const todoSlice = createSlice({
   name: "todos",
