@@ -1,5 +1,6 @@
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import customFetch from "./customFetch";
 import axios from "axios";
-import {createSlice, createAsyncThunk} from 'redux-toolkit'
 
 
 const getAllTodos = createAsyncThunk(
@@ -17,6 +18,9 @@ const getAllTodos = createAsyncThunk(
 );
 
 const initialState = {
+  defaultState: [],
+  isLoading: true,
+};
   defaultState: [],
   isLoading: true,
 };
@@ -44,6 +48,8 @@ const todoSlice = createSlice({
   },
 });
 
+export const { createTodo, deleteTodo, updateTodo, getTodo } =
+  todoSlice.actions;
 export default todoSlice.reducer;
 
 

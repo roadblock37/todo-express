@@ -16,7 +16,7 @@ const createTodo = async (req, res) => {
   res.status(201).json({ todo });
 };
 
-/* Not needed for the application */
+/* Update the selected todo */
 const updateTodo = async (req, res) => {
   const { id: todoID } = req.params;
 
@@ -27,12 +27,14 @@ const updateTodo = async (req, res) => {
   res.status(200).json({ todo });
 };
 
+// delete single todo
 const deleteTodo = async (req, res) => {
   const { id: todoID } = req.params;
   const todo = await Todo.findOneAndDelete({ _id: todoID });
   res.status(200).json({ todo });
 };
 
+// get single todo
 const getTodo = async (req, res) => {
   const { id: todoID } = req.params;
   const todo = await Todo.findOne({ _id: todoID });
