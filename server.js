@@ -22,6 +22,7 @@ app.use(notFound);
 // port variable to listen on port used by host or localhost by default
 const port = process.env.PORT || 5000;
 
+ const mongo_uri = 'mongodb+srv://roadblock37:ip6gtfm6bPOWtw5h@roadblock.4jtwsyh.mongodb.net/todoDB?retryWrites=true&w=majority';
 const start = async () => {
   try {
     await connectDB(process.env.MONGO_URI);

@@ -7,6 +7,9 @@ function App() {
   return (
     <main>
       <Header />
+      <section>
+        <TodoContainer/>
+      </section>
     </main>
   );
 }
