@@ -37,17 +37,17 @@ const todoSlice = createSlice({
     [getAllTodos.pending]: (state) => {
       state.isLoading = true;
     },
-    //       builder.addCase(getTodos.fullfilled, (state, action) => {
-    //         state.isLoading = false;
-    //         state.defaultState = action.payload;
-    //       });
-    //     .addCase(getTodos.pending, (state) => {
-    //       state.isLoading = false;
-    //     })
-    //   .addCase(getTodos.rejected, (state, action) => {
-    //     console.log(action);
-    //     state.isLoading = false;
-    //   });
+          builder.addCase(getTodos.fullfilled, (state, action) => {
+            state.isLoading = false;
+            state.defaultState = action.payload;
+          });
+        .addCase(getTodos.pending, (state) => {
+          state.isLoading = false;
+        })
+      .addCase(getTodos.rejected, (state, action) => {
+        console.log(action);
+        state.isLoading = false;
+      });
   },
 });
 
